@@ -1,11 +1,16 @@
 const express = require('express');
 const logger = require ('morgan');
 const bodyParser = require('body-parser');
+const dotenv = require('dotenv');
 
 
 // Set up the express app
 
 const app = express();
+
+// Load environment variables from .env to process.env
+
+dotenv.config();
 
 
 // Log requests to the console

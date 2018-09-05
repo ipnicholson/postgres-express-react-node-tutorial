@@ -19,4 +19,7 @@ module.exports = (app) => {
 
   // GET a Todo with :id
   app.get('/api/todos/:todoId', todosController.retrieve);
+
+  // Update a Todo
+  app.put('/api/todos/:todoId', todosController.update);
 };

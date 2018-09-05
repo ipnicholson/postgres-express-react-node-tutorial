@@ -14,5 +14,9 @@ module.exports = (app) => {
   // GET on api/todos => list all todos
   app.get('/api/todos', todosController.list);
 
+  // POST a new todoItem
   app.post('/api/todos/:todoId/items', todoItemsController.create);
+
+  // GET a Todo with :id
+  app.get('/api/todos/:todoId', todosController.retrieve);
 };
